@@ -8,7 +8,10 @@ This is a individual assignment.
 
 1. Create a GitHub repository called StringCalculator
 2. Share this repository with the teacher's account: "hap2000"
-3. Programming language is JavaScript
+3. Programming environment:
+    + Programming language: [JavaScript/ECMAScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+    + Testing library: [Jest](https://npmjs.com/package/jest)
+    + Run-Time environment: [Node.js](https://nodejs.org/)
 4. **After each TDD cycle you need to create git commits with descriptive messages.** If a commit is missing for that step, no score is given for that step.
 5. Make sure there are only files that are applicable for the project in the repository.
 6. When the project is finished you turn in the URL to the GitHub repository in Canvas.
