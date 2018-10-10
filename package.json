@@ -1,8 +1,8 @@
 {
-  "name": "stringcalculator",
+  "name": "StringCalculator",
   "version": "1.0.0",
-  "description": "A TDD Kata exercise for SC-T-303-HUGB @ Reykjavik University",
-  "main": "index.js",
+  "description": "## Purpose Learn to use Test Driven Development to create a program.",
+  "main": "stringCalculator.js",
   "scripts": {
     "test": "jest",
     "watch": "jest --watchAll",
@@ -12,15 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/AegirAexx/StringCalculator.git"
   },
-  "keywords": [
-    "TestDrivenDevelopment",
-    "Kata",
-    "NodeJS",
-    "JavaScript",
-    "HUGB"
-  ],
+  "keywords": [],
   "author": "Aegir Aexx",
-  "license": "ISC",
+  "license": "WTFPL",
   "bugs": {
     "url": "https://github.com/AegirAexx/StringCalculator/issues"
   },
