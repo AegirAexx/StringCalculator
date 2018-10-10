@@ -8,10 +8,10 @@ test("should return six when a new line is used as a delimiter", () => {
     expect(add('1\n2,3')).toBe(6);
 });
 
-test("should return a message saying the input is invalid", () => {
-    expect(add('1,\n')).toBe(`Your input is invalid and does not return a number.`);
+test("should not allow negative numbers and then lists them if any", () => {
+    expect(add('1, -1, -3')).toBe(`Negatives are not allowed: -1,-3`);
 });
 
-test("does not allow negative numbers and then lists them if any", () => {
-    expect(add('1, -1, -3')).toBe(`Negatives are not allowed: -1,-3`);
+test("should ignore all values greater than 1000", () => {
+    expect(add('5, 1003, 1000')).toBe(1005);
 });
