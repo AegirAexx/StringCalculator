@@ -1,6 +1,6 @@
 function add(numbers){
 
-    // Set up the default delimiters ("," or "\n") with regular expression.
+    // Set up the default delimiters ("," or "\n") with a regular expression.
     let delimiter = /[,|\n]/;
 
     // Check if the first two chars are "//".
@@ -28,7 +28,7 @@ function add(numbers){
         // ...filter out all the values greater than 1000.
         .filter(value => value <= 1000);
     
-    // Check for and push all the negative values to an array so it can be returned.
+    // Check for and push all the negative values to an array so they can be returned.
     const negatives = arr.filter(potentiallyNegative => potentiallyNegative < 0);
     // If the array actually has anything in it, the program returns them in a message.
     if(negatives.length > 0) { return `Negatives are not allowed: ${negatives}`}
