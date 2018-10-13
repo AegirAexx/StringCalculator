@@ -50,3 +50,7 @@ test('addAgain(): should return 10 when the sting contains 1, 2, 3, 4.', () => {
 test('addAgain(): should return 6 when the string has "newline" as a delimiter "1\\n2, 3".', () => {
     expect(addAgain('1\n2, 3')).toBe(6);
 });
+
+test('addAgain(): should return the negative numbers with a message.', () => {
+    expect(addAgain('2, -3, 4, -5')).toBe('Negatives not allowed: -3, -5');
+});

@@ -47,6 +47,8 @@ function addAgain(numbers) {
     numbers = numbers.replace(/\n/g, ',');
     if (numbers.length == 0){ return 0; }
     const numbersArray = numbers.split(',');
+    const negatives = numbersArray.filter(x => x < 0);
+    if (negatives.length > 0) { return `Negatives not allowed:${negatives}`;}
     const sum = (total, index) => total + index;
     return numbersArray.map(i => parseInt(i)).reduce(sum);
 }
