@@ -1,6 +1,6 @@
 function add(numbers){
 
-    // Set up the default delimiters ("," or "\n") with regular expression.
+    // Set up the default delimiters ("," or "\n") with a regular expression.
     let delimiter = /[,|\n]/;
 
     // Check if the first two chars are "//".
@@ -50,4 +50,4 @@ function addAgain(numbers) {
 module.exports = {
     add,
     addAgain
-}
+};
