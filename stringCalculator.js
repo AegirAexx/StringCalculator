@@ -44,6 +44,10 @@ function add(numbers){
 }
 
 function addAgain(numbers) {
+    if (numbers.startsWith('//')) { 
+        const delimiter = new RegExp(numbers.charAt(2), 'g');
+        numbers = numbers.substring(4).replace(delimiter, ',');
+    }
     numbers = numbers.replace(/\n/g, ',');
     if (numbers.length == 0){ return 0; }
     const numbersArray = numbers.split(',');

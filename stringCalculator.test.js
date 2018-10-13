@@ -58,3 +58,7 @@ test('addAgain(): should return the negative numbers with a message.', () => {
 test('addAgain(): should reject all numbers greater than 1000. "3, 5, 1001, 1000" = 1008.', () => {
     expect(addAgain('3, 5, 1001, 1000')).toBe(1008);
 });
+
+test('addAgain(): should allow the use of a custom delimiter. "//;\\n3;4;5" = 12.', () => {
+    expect(addAgain('//;\n3;4;5')).toBe(12);
+});
