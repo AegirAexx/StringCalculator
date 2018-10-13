@@ -50,7 +50,7 @@ function addAgain(numbers) {
     const negatives = numbersArray.filter(x => x < 0);
     if (negatives.length > 0) { return `Negatives not allowed:${negatives}`;}
     const sum = (total, index) => total + index;
-    return numbersArray.map(i => parseInt(i)).reduce(sum);
+    return numbersArray.map(i => parseInt(i)).filter(x => x <= 1000).reduce(sum);
 }
 
 module.exports = {

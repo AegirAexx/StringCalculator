@@ -54,3 +54,7 @@ test('addAgain(): should return 6 when the string has "newline" as a delimiter "
 test('addAgain(): should return the negative numbers with a message.', () => {
     expect(addAgain('2, -3, 4, -5')).toBe('Negatives not allowed: -3, -5');
 });
+
+test('addAgain(): should reject all numbers greater than 1000. "3, 5, 1001, 1000" = 1008.', () => {
+    expect(addAgain('3, 5, 1001, 1000')).toBe(1008);
+});
