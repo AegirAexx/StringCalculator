@@ -44,6 +44,7 @@ function add(numbers){
 }
 
 function addAgain(numbers) {
+    numbers = numbers.replace(/\n/g, ',');
     if (numbers.length == 0){ return 0; }
     const numbersArray = numbers.split(',');
     const sum = (total, index) => total + index;

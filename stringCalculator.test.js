@@ -39,6 +39,14 @@ test('addAgain(): should return the number when the string contains only one nem
     expect(addAgain('3')).toBe(3);
 });
 
-test('addAgain(): should return the sum of two numbers', () => {
+test('addAgain(): should return the sum of two numbers.', () => {
     expect(addAgain('1,2')).toBe(3);
+});
+
+test('addAgain(): should return 10 when the sting contains 1, 2, 3, 4.', () => {
+    expect(addAgain('1, 2, 3, 4')).toBe(10);
+});
+
+test('addAgain(): should return 6 when the string has "newline" as a delimiter "1\\n2, 3".', () => {
+    expect(addAgain('1\n2, 3')).toBe(6);
 });
