@@ -38,3 +38,7 @@ test('addAgain(): should return zero on an empty string.', () => {
 test('addAgain(): should return the number when the string contains only one nember.', () => {
     expect(addAgain('3')).toBe(3);
 });
+
+test('addAgain(): should return the sum of two numbers', () => {
+    expect(addAgain('1,2')).toBe(3);
+});

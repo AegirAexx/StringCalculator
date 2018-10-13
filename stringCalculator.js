@@ -45,7 +45,9 @@ function add(numbers){
 
 function addAgain(numbers) {
     if (numbers.length == 0){ return 0; }
-    return parseInt(numbers);
+    const numbersArray = numbers.split(',');
+    const sum = (total, index) => total + index;
+    return numbersArray.map(i => parseInt(i)).reduce(sum);
 }
 
 module.exports = {
