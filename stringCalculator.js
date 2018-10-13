@@ -43,17 +43,28 @@ function add(numbers){
     return arr.reduce(reducer);
 }
 
+// Second go and now was able to do it in 11 lines of code and in less than 30 minutes!
 function addAgain(numbers) {
+    // Check for the "//" flag for the custom delimiter.
     if (numbers.startsWith('//')) { 
+        // Dynamically create a regular expresion with the custom delimiter and global(greedy) flag.
         const delimiter = new RegExp(numbers.charAt(2), 'g');
+        // Remove the slashes and replace the delimiters.
         numbers = numbers.substring(4).replace(delimiter, ',');
     }
+    // Replace the "newline" with the "," delimiter.
     numbers = numbers.replace(/\n/g, ',');
+    // Return zero if the string is empty.
     if (numbers.length == 0){ return 0; }
+    // Split the numbers string into an array.
     const numbersArray = numbers.split(',');
+    // Filter the negative numbers into a seperate array.
     const negatives = numbersArray.filter(x => x < 0);
+    // Reject the negative numbers, if any, with a message.
     if (negatives.length > 0) { return `Negatives not allowed:${negatives}`;}
+    // Create a sum method to reduce.
     const sum = (total, index) => total + index;
+    // Finally return the parsed to numbers, without numbers greater than 1000 and added together final number!
     return numbersArray.map(i => parseInt(i)).filter(x => x <= 1000).reduce(sum);
 }
 
