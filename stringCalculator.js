@@ -8,9 +8,9 @@ function add(numbers){
         // Grab the new delimiter.
         const newDelimiter = numbers.charAt(2);
         // Set up the first part of the new regular expression.
-        const first = `[,|\\n|`;
+        const first = '[,|\\n|';
         // Set up the last part of the new regular expression.
-        const end = `]`;
+        const end = ']';
         // Grab the the rest of the string, the actual numbers.
         numbers = numbers.substring(4);
         // Last but not the least, create dynamically a new regular expression.
@@ -27,20 +27,27 @@ function add(numbers){
         .map(stringNumber => parseInt(stringNumber))
         // ...filter out all the values greater than 1000.
         .filter(value => value <= 1000);
-    
+
     // Check for and push all the negative values to an array so it can be returned.
     const negatives = arr.filter(potentiallyNegative => potentiallyNegative < 0);
     // If the array actually has anything in it, the program returns them in a message.
-    if(negatives.length > 0) { return `Negatives are not allowed: ${negatives}`}
-    
+    if(negatives.length > 0) { return `Negatives are not allowed: ${negatives}`;}
+
     // A reducer method to execute on all elements in the array. It's the blueprint to add all the elements together.
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
-    
+
     // If any of the values in the array are not numbers, return a message.
-    if(isNaN(arr.reduce(reducer))) { return `Your input is invalid.`; }
-    
+    if(isNaN(arr.reduce(reducer))) { return 'Your input is invalid.'; }
+
     // Finally add all the values together and return the total sum.
     return arr.reduce(reducer);
-};
+}
 
-module.exports = add;
+function addAgain(numbers) {
+    return 0;
+}
+
+module.exports = {
+    add,
+    addAgain
+}
