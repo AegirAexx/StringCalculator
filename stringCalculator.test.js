@@ -25,7 +25,16 @@ test('add(): should add a delimiter if the first two chars are "//".', () => {
 
 
 // addAgain() tests
+/*
+test('addAgain(): ', () => {
+    expect(addAgain('')).toBe();
+});
+*/
 
 test('addAgain(): should return zero on an empty string.', () => {
     expect(addAgain('')).toBe(0);
+});
+
+test('addAgain(): should return the number when the string contains only one nember.', () => {
+    expect(addAgain('3')).toBe(3);
 });
